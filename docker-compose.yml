@@ -1,9 +1,12 @@
+
 version: '3.8'
 
 services:
   firebase-emulators:
     image: node:18-alpine
     container_name: lacos-firebase-emulators
+    security_opt:
+      - no-new-privileges:true
     ports:
       - "4000:4000"
       - "9099:9099"
